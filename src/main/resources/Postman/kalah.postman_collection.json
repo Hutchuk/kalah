@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "ac152f7c-75e8-4ee3-b498-d3610c379ddc",
+		"name": "kalah",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Person",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Person",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\": \"Pete\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{endpoint}}{{persons}}/create",
+							"host": [
+								"{{endpoint}}{{persons}}"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Person",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"PePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetete\"}"
+						},
+						"url": {
+							"raw": "{{endpoint}}{{persons}}",
+							"host": [
+								"{{endpoint}}{{persons}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Persons By Name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"PePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetete\"}"
+						},
+						"url": {
+							"raw": "{{endpoint}}{{persons}}/name/dave",
+							"host": [
+								"{{endpoint}}{{persons}}"
+							],
+							"path": [
+								"name",
+								"dave"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Person By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"PePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetete\"}"
+						},
+						"url": {
+							"raw": "{{endpoint}}{{persons}}/id/1",
+							"host": [
+								"{{endpoint}}{{persons}}"
+							],
+							"path": [
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"playerOneId\": 1,\r\n\t\"playerTwoId\": 2\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{endpoint}}{{kalah}}/create",
+					"host": [
+						"{{endpoint}}{{kalah}}"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make Move",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"gameId\": 1,\r\n\t\"movingPlayerId\": 1,\r\n\t\"pit\": 1\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{endpoint}}{{kalah}}/move",
+					"host": [
+						"{{endpoint}}{{kalah}}"
+					],
+					"path": [
+						"move"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lookup Game",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"PePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetete\"}"
+				},
+				"url": {
+					"raw": "{{endpoint}}{{kalah}}/id/1",
+					"host": [
+						"{{endpoint}}{{kalah}}"
+					],
+					"path": [
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Games by Player Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"PePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetePetete\"}"
+				},
+				"url": {
+					"raw": "{{endpoint}}{{kalah}}/playerId/1",
+					"host": [
+						"{{endpoint}}{{kalah}}"
+					],
+					"path": [
+						"playerId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

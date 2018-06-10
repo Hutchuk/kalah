@@ -1,0 +1,68 @@
+= Documentation for the Kalah Restful service (/kalah)
+
+The service is running at http://localhost:8090
+
+== Endpoint: /create
+
+.Create request parameters
+include::{snippets}/createGame/Success/request-fields.adoc[]
+
+.Create example Curl request
+include::{snippets}/createGame/Success/curl-request.adoc[]
+
+.Create example example request
+include::{snippets}/createGame/Success/http-request.adoc[]
+
+.Create example success response
+include::{snippets}/createGame/Success/http-response.adoc[]
+
+.Create example failure response
+include::{snippets}/createGame/Failure/http-response.adoc[]
+
+== Endpoint: /id/{id}
+
+.Get Game example Curl request
+include::{snippets}/getGame/Success/curl-request.adoc[]
+
+.Get Game example request
+include::{snippets}/getGame/Success/http-request.adoc[]
+
+.Get Game success response
+include::{snippets}/getGame/Success/http-response.adoc[]
+
+.Get Game failure response
+include::{snippets}/getGame/Failure/http-response.adoc[]
+
+== Endpoint: /move
+
+.Move request parameters
+include::{snippets}/processMove/Success/request-fields.adoc[]
+
+.Move example Curl request
+include::{snippets}/processMove/Success/curl-request.adoc[]
+
+.Move example request
+include::{snippets}/processMove/Success/http-request.adoc[]
+
+.Move example success response
+include::{snippets}/processMove/Success/http-response.adoc[]
+
+.Move example failure response
+include::{snippets}/processMove/Failure/http-response.adoc[]
+
+== Endpoint: /playerId
+
+.Find by playerId example Curl request
+include::{snippets}/getByPlayerId/Success/curl-request.adoc[]
+
+.Find by playerId example request
+include::{snippets}/getByPlayerId/Success/http-request.adoc[]
+
+.Find by playerId response
+include::{snippets}/getByPlayerId/Success/http-response.adoc[]
+
+== Response Fields
+include::{snippets}/processMove/Success/response-fields.adoc[]
+
+
+_This documentation is generated automatically._
