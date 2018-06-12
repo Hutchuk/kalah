@@ -23,7 +23,7 @@ import java.util.Optional;
 
 
 /**
- * {@inheritDoc}
+ * Implementation of the {@link GameService} interface
  */
 @Service
 public class GameServiceImpl implements GameService {
@@ -52,11 +52,17 @@ public class GameServiceImpl implements GameService {
         return kalahGame;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public KalahGame saveGame(KalahGame game) {
         return gameRepository.save(game);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public KalahGameResponse loadGame(long gameId) {
 
@@ -74,6 +80,9 @@ public class GameServiceImpl implements GameService {
         return response;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean checkStartingPitValidity(KalahMoveRequest request, KalahGame game) {
         if (isPlayerOneCurrentMover(game)) {
@@ -184,6 +193,9 @@ public class GameServiceImpl implements GameService {
         return game.getCurrentPlayer().getPersonId().equals(game.getPlayerOne().getPersonId());
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public KalahGameResponse checkRequestAndCreateGame(KalahCreateGameRequest request) {
         KalahGameResponse response = new KalahGameResponse();

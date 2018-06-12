@@ -5,11 +5,15 @@ import com.hutch.kalah.entity.KalahGame;
 import com.hutch.kalah.service.StoneService;
 import org.springframework.stereotype.Service;
 
+
 /**
- * {@inheritDoc}
+ * Implementation of the {@link StoneService} interface.
  */
 @Service
 public class StoneServiceImpl implements StoneService {
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PlaceStonesOutput placeStones(KalahGame game, int startingPit, boolean currentlyProcessingPlayerOnePits, int stones) {
         PlaceStonesOutput output = new PlaceStonesOutput();
@@ -107,6 +111,9 @@ public class StoneServiceImpl implements StoneService {
         return total - i;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public KalahGame moveLeftoverStonesToKalah(KalahGame game, int totalPlayer1, int totalPlayer2) {
         int total;
@@ -132,6 +139,9 @@ public class StoneServiceImpl implements StoneService {
         return game;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public int getStonesAndEmptyStartingPit(KalahGame game, boolean currentlyProcessingPlayerOnePits, int pit) {
         int stones;
